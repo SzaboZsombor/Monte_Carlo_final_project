@@ -1,4 +1,4 @@
-# 🌀 Monte Carlo Simulation of Photon Transport in a NaI Scintillation Detector
+# Monte Carlo Simulation of Photon Transport in a NaI Scintillation Detector
 
 This project simulates gamma photon transport using a Monte Carlo method within a cylindrical Sodium Iodide (NaI) scintillation detector. The goal is to generate realistic gamma-ray spectra and calculate detector efficiencies by simulating individual photon interactions based on physical cross sections.
 
