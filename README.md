@@ -41,7 +41,22 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 
 ## 🗂 Project Structure
 
-<pre> . ├── <b>codes/</b> │ ├── main.py # Main simulation script │ ├── cross_sections_data.py # Loads and interpolates cross-section data │ ├── transport_simulation.py # Photon physics (Compton, photoelectric, etc.) │ ├── calculating_geometric_properties.py # 3D geometry and bounding checks │ ├── energy_calculation.py # Builds 1024-channel energy spectrum │ ├── monte_carlo_initialisations.py # Random vector generation, FWHM, etc. ├── <b>plots_and_data/</b> │ ├── energy_spectrum_A.png │ ├── energy_spectrum_B.png │ ├── detector_geometry.png │ ├── efficiencies_vs_position.png │ ├── efficiencies_vs_energy.png │ └── cross_sections_data.txt </pre>
+```
+.
+├── codes/
+│   ├── main.py                             # Main simulation script
+│   ├── cross_sections_data.py              # Loads and interpolates cross-section data
+│   ├── transport_simulation.py             # Photon physics (Compton, photoelectric, etc.)
+│   ├── calculating_geometric_properties.py # 3D geometry and bounding checks
+│   ├── energy_calculation.py               # Builds 1024-channel energy spectrum
+│   ├── monte_carlo_initialisations.py      # Random vector generation, FWHM, etc.
+├── plots_and_data/
+│   ├── energy_spectrum_A.png
+│   ├── energy_spectrum_B.png
+│   ├── detector_geometry.png
+│   ├── efficiencies_vs_position.png
+│   ├── efficiencies_vs_energy.png
+│
 
 ---
 
