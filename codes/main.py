@@ -88,7 +88,7 @@ def main():
     plt.figure()
     plt.plot(energies, effs_tot_B, label=r'$η_{tot}$')
     plt.plot(energies, effs_int_B, label=r'$η_{int}$')
-    plt.xlabel('Source energy (MeV)')
+    plt.xlabel('Source energy [MeV]')
     plt.ylabel('Efficiency')
     plt.title('Efficiencies vs. Source Energy (Spectrum B)')
     plt.legend()
