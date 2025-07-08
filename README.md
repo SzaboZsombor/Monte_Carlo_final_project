@@ -32,7 +32,8 @@ The final gamma-ray spectrum represents energy deposited within the detector and
   <img src="plots_and_data/energy_spectrum_B.png" alt="Gamma Spectrum" width="600"/>
 </p>
 
-- Source energy: 1332.5 keV  
+- Source energy: 1332.5 keV
+- Number of photons: 500000 (only in the cone that contains the detector)
 - Detector resolution: 6 keV FWHM  
 - Spectrum includes photopeak and Compton edge  
 - 1024-channel histogram with Gaussian broadening
@@ -56,7 +57,6 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 │   ├── detector_geometry.png
 │   ├── efficiencies_vs_position.png
 │   ├── efficiencies_vs_energy.png
-│
 
 ```
 ---
