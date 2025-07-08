@@ -3,12 +3,12 @@
 This project simulates gamma photon transport using a Monte Carlo method within a cylindrical Sodium Iodide (NaI) scintillation detector. The goal is to generate realistic gamma-ray spectra and calculate detector efficiencies by simulating individual photon interactions based on physical cross sections.
 
 <p align="center">
-  <img src="results/detector_geometry.png" alt="Detector Geometry" width="400"/>
+  <img src="plots_and_data/detector_geometry.png" alt="Detector Geometry" width="400"/>
 </p>
 
 ---
 
-## ⚛️ Physical and Mathematical Background
+## Simulation Background
 
 Monoenergetic gamma photons emitted isotropically from a point source are simulated as they interact with a NaI scintillation detector. The simulation tracks these photons as they undergo physical processes such as:
 
@@ -18,23 +18,6 @@ Monoenergetic gamma photons emitted isotropically from a point source are simula
 
 These interactions are probabilistically sampled using cross-section data from the **NIST XCOM** database. The trajectory of each photon is updated step-by-step until absorption or escape. Energy deposited by interactions is recorded in a histogram to generate a gamma-ray spectrum, smoothed using a Gaussian detector resolution model.
 
-**Key Equations:**
-
-- **Photon mean free path:**
-  \[
-  \lambda(E) = \frac{1}{\mu_{\text{tot}}(E)} = \frac{1}{\rho \cdot \sigma_{\text{tot}}(E)}
-  \]
-
-- **Compton scattering energy:**
-  \[
-  E' = \frac{E}{1 + \frac{E}{m_e c^2} (1 - \cos\theta)}
-  \]
-
-- **Gaussian energy broadening (FWHM):**
-  \[
-  \sigma(E) = \frac{\text{FWHM}}{2.35}
-  \]
-
 The final gamma-ray spectrum represents energy deposited within the detector and includes features like:
 
 - **Photopeaks** (full absorption)  
@@ -43,13 +26,13 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 
 ---
 
-## 🧪 Sample Result – Gamma Spectrum
+## Sample Result – Gamma Spectrum
 
 <p align="center">
-  <img src="results/spectrum_example.png" alt="Gamma Spectrum" width="600"/>
+  <img src="plot_and_data/energy_spectrum_B.png" alt="Gamma Spectrum" width="600"/>
 </p>
 
-- Source energy: 661.7 keV  
+- Source energy: 1332.5 keV  
 - Detector resolution: 6 keV FWHM  
 - Spectrum includes photopeak and Compton edge  
 - 1024-channel histogram with Gaussian broadening
