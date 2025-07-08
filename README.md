@@ -39,7 +39,7 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 .
@@ -58,6 +58,7 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 │   ├── efficiencies_vs_energy.png
 │
 
+```
 ---
 
 ## Features
