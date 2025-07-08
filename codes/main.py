@@ -65,8 +65,8 @@ def main():
     plot_geometries(positions, height_A, radius_A, save_path=r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\detector_geometry.png')
 
     plt.figure()
-    plt.plot(range(1, 12), effs_tot, label=r'$η_tot$')
-    plt.plot(range(1, 12), effs_int, label=r'$η_int$')
+    plt.plot(range(1, 12), effs_tot, label=r'$η_{tot}$')
+    plt.plot(range(1, 12), effs_int, label=r'$η_{int}$')
     plt.xlabel('Position number')
     plt.ylabel('Efficiency')
     plt.title('Efficiencies vs. Source Position (Spectrum A)')
@@ -86,8 +86,8 @@ def main():
         effs_int_B.append(eff_int)
 
     plt.figure()
-    plt.plot(energies, effs_tot_B, label=r'$η_tot$')
-    plt.plot(energies, effs_int_B, label=r'$η_int$')
+    plt.plot(energies, effs_tot_B, label=r'$η_{tot}$')
+    plt.plot(energies, effs_int_B, label=r'$η_{int}$')
     plt.xlabel('Source energy (MeV)')
     plt.ylabel('Efficiency')
     plt.title('Efficiencies vs. Source Energy (Spectrum B)')
