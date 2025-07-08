@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from energy_calculation import plot_energy_accumulator
 from transport_simulation import record_gamma_spectrum
-import mpl_toolkits.mplot3d as mplot3d
 
 def plot_geometries(positions, detector_height, detector_radius, save_path=None):
 
@@ -44,13 +43,13 @@ def main():
     FWHM_B = 8.0 / 1000  # MeV
     num_particles = 500000
 
-    cross_sections_file_path = r'D:\Egyetem\Monte Carlo\Monte-Carlo_final_project\plots_and_data\cross_sections_data.txt'
+    cross_sections_file_path = r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\cross_sections_data.txt'
     energy_acc_A, eff_tot_A, eff_int_A = record_gamma_spectrum(source_A, energy_A, height_A, radius_A, density, FWHM_A, num_particles, cross_sections_file_path=cross_sections_file_path)
-    plot_energy_accumulator(energy_acc_A, f'Gamma Spectrum ({energy_A} MeV)', energy_A, save_path=r'D:\Egyetem\Monte Carlo\Monte-Carlo_final_project\plots_and_data\energy_spectrum_A.png')
+    plot_energy_accumulator(energy_acc_A, f'Gamma Spectrum ({energy_A} MeV)', energy_A, save_path=r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\energy_spectrum_A.png')
     print(f"Spectrum A ({energy_A} MeV): η_tot =", eff_tot_A, "η_int =", eff_int_A)
 
     energy_acc_B, eff_tot_B, eff_int_B = record_gamma_spectrum(source_B, energy_B, height_B, radius_B, density, FWHM_B, num_particles, cross_sections_file_path=cross_sections_file_path)
-    plot_energy_accumulator(energy_acc_B, f'Gamma Spectrum ({energy_B} MeV)', energy_B, save_path=r'D:\Egyetem\Monte Carlo\Monte-Carlo_final_project\plots_and_data\energy_spectrum_B.png')
+    plot_energy_accumulator(energy_acc_B, f'Gamma Spectrum ({energy_B} MeV)', energy_B, save_path=r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\energy_spectrum_B.png')
     print(f"Spectrum B ({energy_B} MeV): η_tot =", eff_tot_B, "η_int =", eff_int_B)
 
     positions = np.linspace([1.0, 3.5, 2.0], [-4.0, -1.5, 2.0], 11)
@@ -58,12 +57,12 @@ def main():
     effs_int = []
 
     for pos in positions:
-        _, eff_tot, eff_int = record_gamma_spectrum(pos, energy_A, height_A, radius_A, density, FWHM_A, num_particles)
+        _, eff_tot, eff_int = record_gamma_spectrum(pos, energy_A, height_A, radius_A, density, FWHM_A, num_particles, cross_sections_file_path=cross_sections_file_path)
         effs_tot.append(eff_tot)
         effs_int.append(eff_int)
 
 
-    plot_geometries(positions, height_A, radius_A, save_path=r'D:\Egyetem\Monte Carlo\Monte-Carlo_final_project\plots_and_data\detector_geometry.png')
+    plot_geometries(positions, height_A, radius_A, save_path=r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\detector_geometry.png')
 
     plt.figure()
     plt.plot(range(1, 12), effs_tot, label=r'$η_tot$')
@@ -73,7 +72,7 @@ def main():
     plt.title('Efficiencies vs. Source Position (Spectrum A)')
     plt.legend()
     plt.grid(True)
-    plt.savefig(r'D:\Egyetem\Monte Carlo\Monte-Carlo_final_project\plots_and_data\efficiencies_vs_position.png')
+    plt.savefig(r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\efficiencies_vs_position.png')
     plt.show()
 
 
@@ -82,7 +81,7 @@ def main():
     effs_int_B = []
 
     for E in energies:
-        _, eff_tot, eff_int = record_gamma_spectrum(source_B, E, height_B, radius_B, density, FWHM_B, num_particles)
+        _, eff_tot, eff_int = record_gamma_spectrum(source_B, E, height_B, radius_B, density, FWHM_B, num_particles, cross_sections_file_path=cross_sections_file_path)
         effs_tot_B.append(eff_tot)
         effs_int_B.append(eff_int)
 
@@ -94,7 +93,7 @@ def main():
     plt.title('Efficiencies vs. Source Energy (Spectrum B)')
     plt.legend()
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
-    plt.savefig(r'D:\Egyetem\Monte Carlo\Monte-Carlo_final_project\plots_and_data\efficiencies_vs_energy.png')
+    plt.savefig(r'D:\Egyetem\Monte Carlo\Monte_Carlo_final_project\plots_and_data\efficiencies_vs_energy.png')
     plt.tight_layout()
     plt.show()
 
