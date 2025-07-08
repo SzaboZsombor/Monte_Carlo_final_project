@@ -29,7 +29,7 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 ## Sample Result – Gamma Spectrum
 
 <p align="center">
-  <img src="plot_and_data/energy_spectrum_B.png" alt="Gamma Spectrum" width="600"/>
+  <img src="plots_and_data/energy_spectrum_B.png" alt="Gamma Spectrum" width="600"/>
 </p>
 
 - Source energy: 1332.5 keV  
@@ -57,7 +57,6 @@ The final gamma-ray spectrum represents energy deposited within the detector and
 │   ├── efficiencies_vs_position.png
 │   ├── efficiencies_vs_energy.png
 │   └── cross_sections_data.txt
-
 ---
 
 ## Features
